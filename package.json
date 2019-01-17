@@ -1,0 +1,52 @@
+{
+  "name": "immutable-dll",
+  "version": "0.0.0",
+  "description": "A Doubly Linked List storing immutable values and providing a fluent, functional interface.",
+  "main": "index.js",
+  "files": [
+    "index.d.ts",
+    "index.js.map",
+    "modules/**/*",
+    "Readme.md",
+    "LICENCE"
+  ],
+  "scripts": {
+    "prepublishOnly": "tsc",
+    "docs": "typedoc --mode file --theme minimal --target ES6 --out docs src",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/PaperElectron/immutable-dll.git"
+  },
+  "keywords": [
+    "Datastructure",
+    "Immutable",
+    "Functional",
+    "Fluent"
+  ],
+  "author": "Jim Bulkowski <jim.b@paperelectron.com> (http://paperelectron.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PaperElectron/immutable-dll/issues"
+  },
+  "homepage": "https://github.com/PaperElectron/immutable-dll#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "@types/lodash.clonedeep": "^4.5.4",
+    "@types/lodash.isplainobject": "^4.0.4",
+    "@types/node": "^10.12.18",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^7.0.1",
+    "typedoc": "^0.14.1",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.isplainobject": "^4.0.6"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
