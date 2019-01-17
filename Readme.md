@@ -2,7 +2,7 @@
 
 ### A Doubly linked list featuring functional methods, immutable data and a fluent interface.
 
-
+### [Full documentation](https://paperelectron.github.io/immutable-dll/index.html)
 
 ### Install
 
