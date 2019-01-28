@@ -928,6 +928,12 @@ img { max-width: 100%; }
 					<a href="dlinkedlist.html#clear" class="tsd-kind-icon">clear</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="dlinkedlist.html#each" class="tsd-kind-icon">each</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="dlinkedlist.html#eachreverse" class="tsd-kind-icon">each<wbr>Reverse</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="dlinkedlist.html#filter" class="tsd-kind-icon">filter</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -999,6 +1005,9 @@ img { max-width: 100%; }
 			<a href="node.html" class="tsd-kind-icon">Node</a>
 		</li>
 		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+			<a href="../globals.html#eachiteratee" class="tsd-kind-icon">each<wbr>Iteratee</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 			<a href="../globals.html#filterpredicate" class="tsd-kind-icon">filter<wbr>Predicate</a>
 		</li>
 		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
@@ -1047,6 +1056,8 @@ img { max-width: 100%; }
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="dlinkedlist.html#append" class="tsd-kind-icon">append</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="dlinkedlist.html#clear" class="tsd-kind-icon">clear</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="dlinkedlist.html#each" class="tsd-kind-icon">each</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="dlinkedlist.html#eachreverse" class="tsd-kind-icon">each<wbr>Reverse</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="dlinkedlist.html#filter" class="tsd-kind-icon">filter</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="dlinkedlist.html#find" class="tsd-kind-icon">find</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="dlinkedlist.html#findnode" class="tsd-kind-icon">find<wbr>Node</a></li>
@@ -1082,7 +1093,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">head_<wbr>node<span class="tsd-signature-symbol">:</span> <a href="node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in modules/DLinkedList.ts:45</li>
+						<li>Defined in modules/DLinkedList.ts:52</li>
 					</ul>
 				</aside>
 			</section>
@@ -1092,7 +1103,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">length<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> =&nbsp;0</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in modules/DLinkedList.ts:47</li>
+						<li>Defined in modules/DLinkedList.ts:54</li>
 					</ul>
 				</aside>
 			</section>
@@ -1102,7 +1113,7 @@ img { max-width: 100%; }
 				<div class="tsd-signature tsd-kind-icon">tail_<wbr>node<span class="tsd-signature-symbol">:</span> <a href="node.html" class="tsd-signature-type">Node</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;null</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in modules/DLinkedList.ts:46</li>
+						<li>Defined in modules/DLinkedList.ts:53</li>
 					</ul>
 				</aside>
 			</section>
@@ -1119,7 +1130,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:139</li>
+								<li>Defined in modules/DLinkedList.ts:146</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1152,7 +1163,7 @@ img { max-width: 100%; }
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:337</li>
+								<li>Defined in modules/DLinkedList.ts:344</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1168,6 +1179,72 @@ dll.clear() <span class="hljs-comment">// []</span>
 				</ul>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="each" class="tsd-anchor"></a>
+				<h3>each</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">each<span class="tsd-signature-symbol">(</span>iteratee<span class="tsd-signature-symbol">: </span><a href="../globals.html#eachiteratee" class="tsd-signature-type">eachIteratee</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="dlinkedlist.html" class="tsd-signature-type">DLinkedList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in modules/DLinkedList.ts:484</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Runs iteratee with the cloned value found in each node, in order.</p>
+							</div>
+							<pre><code>const dll = DLinkedList.fromArray([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>])
+dll.each(v =&gt; console.log(v * <span class="hljs-number">2</span>)) <span class="hljs-comment">// 2,4,6,8,10</span>
+</code></pre>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>iteratee: <a href="../globals.html#eachiteratee" class="tsd-signature-type">eachIteratee</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="dlinkedlist.html" class="tsd-signature-type">DLinkedList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="eachreverse" class="tsd-anchor"></a>
+				<h3>each<wbr>Reverse</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">each<wbr>Reverse<span class="tsd-signature-symbol">(</span>iteratee<span class="tsd-signature-symbol">: </span><a href="../globals.html#eachiteratee" class="tsd-signature-type">eachIteratee</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="dlinkedlist.html" class="tsd-signature-type">DLinkedList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in modules/DLinkedList.ts:507</li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Runs iteratee with the cloned value found in each node, in reverse order.</p>
+							</div>
+							<pre><code>const dll = DLinkedList.fromArray([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>])
+dll.eachReverse(v =&gt; console.log(v * <span class="hljs-number">2</span>)) <span class="hljs-comment">// 10,8,6,4,2</span>
+</code></pre>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>iteratee: <a href="../globals.html#eachiteratee" class="tsd-signature-type">eachIteratee</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="dlinkedlist.html" class="tsd-signature-type">DLinkedList</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 				<a name="filter" class="tsd-anchor"></a>
 				<h3>filter</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -1177,7 +1254,7 @@ dll.clear() <span class="hljs-comment">// []</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:477</li>
+								<li>Defined in modules/DLinkedList.ts:530</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1211,7 +1288,7 @@ let doubled = dll.filter(v =&gt; v &gt;= <span class="hljs-number">4</span>) <sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:408</li>
+								<li>Defined in modules/DLinkedList.ts:415</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1247,7 +1324,7 @@ let node = dll.find(v =&gt; v === <span class="hljs-number">1</span>) <span clas
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:385</li>
+								<li>Defined in modules/DLinkedList.ts:392</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1280,7 +1357,7 @@ let <span class="hljs-keyword">node</span> <span class="hljs-title">= dll</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:99</li>
+								<li>Defined in modules/DLinkedList.ts:106</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1313,7 +1390,7 @@ let <span class="hljs-keyword">node</span> <span class="hljs-title">= dll</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:58</li>
+								<li>Defined in modules/DLinkedList.ts:65</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1341,7 +1418,7 @@ let <span class="hljs-keyword">node</span> <span class="hljs-title">= dll</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:65</li>
+								<li>Defined in modules/DLinkedList.ts:72</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1363,7 +1440,7 @@ let <span class="hljs-keyword">node</span> <span class="hljs-title">= dll</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:164</li>
+								<li>Defined in modules/DLinkedList.ts:171</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1399,7 +1476,7 @@ let <span class="hljs-keyword">node</span> <span class="hljs-title">= dll</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:178</li>
+								<li>Defined in modules/DLinkedList.ts:185</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1432,7 +1509,7 @@ let <span class="hljs-keyword">node</span> <span class="hljs-title">= dll</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:208</li>
+								<li>Defined in modules/DLinkedList.ts:215</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1468,7 +1545,7 @@ let <span class="hljs-keyword">node</span> <span class="hljs-title">= dll</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:224</li>
+								<li>Defined in modules/DLinkedList.ts:231</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1501,7 +1578,7 @@ let <span class="hljs-keyword">node</span> <span class="hljs-title">= dll</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:425</li>
+								<li>Defined in modules/DLinkedList.ts:432</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1541,7 +1618,7 @@ let doubled = dll.map(v =&gt; v * <span class="hljs-number">2</span>) <span clas
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:451</li>
+								<li>Defined in modules/DLinkedList.ts:458</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1581,7 +1658,7 @@ let doubled = dll.mapReverse(v =&gt; v * <span class="hljs-number">2</span>) <sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:116</li>
+								<li>Defined in modules/DLinkedList.ts:123</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1614,7 +1691,7 @@ let doubled = dll.mapReverse(v =&gt; v * <span class="hljs-number">2</span>) <sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:495</li>
+								<li>Defined in modules/DLinkedList.ts:548</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1653,7 +1730,7 @@ let doubled = dll.mapReverse(v =&gt; v * <span class="hljs-number">2</span>) <sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:253</li>
+								<li>Defined in modules/DLinkedList.ts:260</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1686,7 +1763,7 @@ let doubled = dll.mapReverse(v =&gt; v * <span class="hljs-number">2</span>) <sp
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:290</li>
+								<li>Defined in modules/DLinkedList.ts:297</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1711,7 +1788,7 @@ dll.removeHead() <span class="hljs-comment">// [2,3,4,5]</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:268</li>
+								<li>Defined in modules/DLinkedList.ts:275</li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1734,7 +1811,7 @@ dll.removeHead() <span class="hljs-comment">// [2,3,4,5]</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:314</li>
+								<li>Defined in modules/DLinkedList.ts:321</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1759,7 +1836,7 @@ dll.removeTail() <span class="hljs-comment">// [1,2,3,4]</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:78</li>
+								<li>Defined in modules/DLinkedList.ts:85</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1787,7 +1864,7 @@ dll.removeTail() <span class="hljs-comment">// [1,2,3,4]</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:85</li>
+								<li>Defined in modules/DLinkedList.ts:92</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1809,7 +1886,7 @@ dll.removeTail() <span class="hljs-comment">// [1,2,3,4]</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:362</li>
+								<li>Defined in modules/DLinkedList.ts:369</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1842,7 +1919,7 @@ dll.toArray() <span class="hljs-comment">// [{a: 1}, {a: 2}]</span>
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in modules/DLinkedList.ts:39</li>
+								<li>Defined in modules/DLinkedList.ts:46</li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">

@@ -274,6 +274,27 @@ describe('Double Linked List', () => {
     expect(squared.toArray()).toEqual([25, 16, 9, 4, 1])
   })
 
+  test('.each - calls iteratee with current node value.', () => {
+    let dll = DLinkedList.fromArray([1,2,3,4,5])
+
+    let sideEffects = []
+
+    dll.each((data) => {
+      sideEffects.push(data * data)
+    })
+    expect(sideEffects).toEqual([1, 4, 9, 16, 25])
+  })
+
+  test('.eachReverse - Same as above, but backwards', () => {
+    let dll = DLinkedList.fromArray([1,2,3,4,5])
+    let sideEffects = []
+    dll.eachReverse((data) => {
+      sideEffects.push(data * data)
+    })
+
+    expect(sideEffects).toEqual([25, 16, 9, 4, 1])
+  })
+
   test('.find - Returns the first entry predicate returns truthy for.', () => {
     let dll = new DLinkedList()
     dll
