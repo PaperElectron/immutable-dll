@@ -5,7 +5,7 @@
  * @license MIT {@link http://opensource.org/licenses/MIT}
  */
 
-import {DLinkedList} from '../src'
+import {DLinkedList} from '../src/index'
 
 describe('Double Linked List', () => {
 
