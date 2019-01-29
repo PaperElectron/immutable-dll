@@ -2,7 +2,11 @@
 
 ### A Doubly linked list featuring functional methods, immutable data and a fluent interface.
 
-### [Full documentation](https://paperelectron.github.io/immutable-dll/index.html)
+[![NPM Version][npm-image]][npm-url]
+[![Linux][travis-image]][travis-url]
+[![Code Coverage][coveralls-image]][coveralls-url]
+
+#### [See the Full documentation](https://paperelectron.github.io/immutable-dll/index.html) or [Checkout on Github][github-url]
 
 ### Install
 
@@ -69,3 +73,11 @@ double.toArray() // [ { a: 2, b: 4 }, { a: 6, b: 8 }, { a: 10, b: 12 } ]
 ```
  
 [Full documentation can be found here!](https://paperelectron.github.io/immutable-dll/index.html)
+
+[github-url]: https://github.com/PaperElectron/immutable-dll
+[npm-image]: https://img.shields.io/npm/v/immutable-dll.svg
+[npm-url]: https://www.npmjs.com/package/immutable-dll
+[travis-image]: https://travis-ci.org/PaperElectron/immutable-dll.svg?branch=master
+[travis-url]: https://travis-ci.org/PaperElectron/immutable-dll
+[coveralls-image]: https://coveralls.io/repos/github/PaperElectron/immutable-dll/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/PaperElectron/immutable-dll?branch=master
