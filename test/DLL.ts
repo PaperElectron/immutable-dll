@@ -260,11 +260,11 @@ describe('Double Linked List', () => {
     expect(squared.toArray()).toEqual([1, 4, 9, 16, 25])
   })
 
-  test('.mapReverse - Same as above, but backwards', () => {
+  test('.mapRight - Same as above, but backwards', () => {
     let dll = DLinkedList.fromArray([1,2,3,4,5])
 
-    let identity = dll.mapReverse()
-    let squared = dll.mapReverse<number>((data) => {
+    let identity = dll.mapRight()
+    let squared = dll.mapRight<number>((data) => {
       return data * data
     })
 
@@ -272,6 +272,25 @@ describe('Double Linked List', () => {
     expect(dll.toArray()).toEqual([])
     expect(identity.toArray()).toEqual([5, 4, 3, 2, 1])
     expect(squared.toArray()).toEqual([25, 16, 9, 4, 1])
+  })
+
+  test('.asyncMap - - Asynchronously steps through the list backwards.', async () => {
+    let dll = DLinkedList.fromArray<number>([1,2,3,4,5])
+
+    let results = await dll.asyncMap((n) => {
+      return Promise.resolve(n * n)
+    })
+
+    expect(results.toArray()).toEqual([ 1, 4, 9, 16, 25 ]);
+  })
+
+  test('.asyncMapRight - Asynchronously steps through the list backwards.', async () => {
+    let dll = DLinkedList.fromArray<number>([1,2,3,4,5])
+    let results = await dll.asyncMapRight((n) => {
+      return Promise.resolve(n * n)
+    })
+
+    expect(results.toArray()).toEqual([25, 16, 9, 4, 1 ]);
   })
 
   test('.each - calls iteratee with current node value.', () => {
@@ -285,10 +304,10 @@ describe('Double Linked List', () => {
     expect(sideEffects).toEqual([1, 4, 9, 16, 25])
   })
 
-  test('.eachReverse - Same as above, but backwards', () => {
+  test('.eachRight - Same as above, but backwards', () => {
     let dll = DLinkedList.fromArray([1,2,3,4,5])
     let sideEffects = []
-    dll.eachReverse((data) => {
+    dll.eachRight((data) => {
       sideEffects.push(data * data)
     })
 
@@ -333,8 +352,40 @@ describe('Double Linked List', () => {
       return acc
     }, 0)
 
-    console.log(results)
+    expect(results).toEqual(15)
 
+
+  })
+
+  test('.reduceRight - Reduces list values to a single element, in reverse order.', () => {
+    let dll = DLinkedList.fromArray([1,2,3,4,5])
+    let results = dll.reduceRight((v, acc) => {
+      acc -= v
+      return acc
+    }, 15)
+
+    expect(results).toEqual(0)
+  })
+
+  test('.asyncReduce - Asynchronously Reduces list values to a single element', async () => {
+    let dll = DLinkedList.fromArray([1,2,3,4,5])
+    let results = await dll.asyncReduce((v, acc) => {
+      acc += v
+      return Promise.resolve(acc)
+    }, 0)
+
+    expect(results).toEqual(15)
+
+  })
+
+  test('.asyncReduceRight - Asynchronously Reduces list values to a single element, in reverse order', async () => {
+    let dll = DLinkedList.fromArray([1,2,3,4,5])
+    let results = await dll.asyncReduceRight((v, acc) => {
+      acc -= v
+      return Promise.resolve(acc)
+    }, 15)
+
+    expect(results).toEqual(0)
 
   })
 });

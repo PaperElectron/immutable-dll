@@ -916,6 +916,12 @@ img { max-width: 100%; }
 			<a href="classes/node.html" class="tsd-kind-icon">Node</a>
 		</li>
 		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+			<a href="globals.html#asyncmapiteratee" class="tsd-kind-icon">async<wbr>Map<wbr>Iteratee</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+			<a href="globals.html#asyncreduceiteratee" class="tsd-kind-icon">async<wbr>Reduce<wbr>Iteratee</a>
+		</li>
+		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 			<a href="globals.html#eachiteratee" class="tsd-kind-icon">each<wbr>Iteratee</a>
 		</li>
 		<li class=" tsd-kind-type-alias tsd-has-type-parameter">
@@ -999,6 +1005,8 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 					<section class="tsd-index-section ">
 						<h3>Type aliases</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#asyncmapiteratee" class="tsd-kind-icon">async<wbr>Map<wbr>Iteratee</a></li>
+							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#asyncreduceiteratee" class="tsd-kind-icon">async<wbr>Reduce<wbr>Iteratee</a></li>
 							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#eachiteratee" class="tsd-kind-icon">each<wbr>Iteratee</a></li>
 							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#filterpredicate" class="tsd-kind-icon">filter<wbr>Predicate</a></li>
 							<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="globals.html#mapiteratee" class="tsd-kind-icon">map<wbr>Iteratee</a></li>
@@ -1017,6 +1025,89 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Type aliases</h2>
 			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+				<a name="asyncmapiteratee" class="tsd-anchor"></a>
+				<h3>async<wbr>Map<wbr>Iteratee</h3>
+				<div class="tsd-signature tsd-kind-icon">async<wbr>Map<wbr>Iteratee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in modules/DLinkedList.ts:46</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Function signature expected by .asyncMap, .asyncMapRight</p>
+					</div>
+					<pre><code> let f: asyncMapIteratee&lt;<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>&gt; = (<span class="hljs-built_in">value</span>: <span class="hljs-built_in">number</span>) =&gt; Promise.<span class="hljs-built_in">resolve</span>(<span class="hljs-built_in">value</span> * <span class="hljs-built_in">value</span>)</code></pre>
+				</div>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-siganture">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">V</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>T: <span class="tsd-signature-type">any</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span>
+										<span class="tsd-signature-symbol"> | </span>
+										<span class="tsd-signature-type">V</span>
+									</h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+				<a name="asyncreduceiteratee" class="tsd-anchor"></a>
+				<h3>async<wbr>Reduce<wbr>Iteratee</h3>
+				<div class="tsd-signature tsd-kind-icon">async<wbr>Reduce<wbr>Iteratee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in modules/DLinkedList.ts:72</li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p> Function signature expected by .reduce, .reduceRight</p>
+					</div>
+					<pre><code> <span class="hljs-keyword">let</span> f: reduceIteratee&lt;<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>&gt; = <span class="hljs-function">(<span class="hljs-params">value, acc</span>) =&gt;</span> {
+   acc += value
+   <span class="hljs-keyword">return</span> acc
+ }</code></pre>
+				</div>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-siganture">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, V<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>T: <span class="tsd-signature-type">any</span></h5>
+										</li>
+										<li>
+											<h5>V: <span class="tsd-signature-type">any</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
 				<a name="eachiteratee" class="tsd-anchor"></a>
 				<h3>each<wbr>Iteratee</h3>
 				<div class="tsd-signature tsd-kind-icon">each<wbr>Iteratee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
@@ -1027,7 +1118,7 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Function signature expected by .each, .eachReverse</p>
+						<p>Function signature expected by .each, .eachRight</p>
 					</div>
 					<pre><code> <span class="hljs-keyword">let</span> f: eachIteratee&lt;<span class="hljs-built_in">number</span>&gt; = <span class="hljs-function">(<span class="hljs-params">value: <span class="hljs-built_in">number</span></span>) =&gt;</span> <span class="hljs-string">`I have this value: <span class="hljs-subst">${value}</span>`</span></code></pre>
 				</div>
@@ -1101,7 +1192,7 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Function signature expected by .map, .mapReverse</p>
+						<p>Function signature expected by .map, .mapRight</p>
 					</div>
 					<pre><code> <span class="hljs-keyword">let</span> f: mapIteratee&lt;<span class="hljs-built_in">number</span>, <span class="hljs-built_in">string</span>&gt; = <span class="hljs-function">(<span class="hljs-params">value: <span class="hljs-built_in">number</span></span>) =&gt;</span> <span class="hljs-string">`I have this value: <span class="hljs-subst">${value}</span>`</span></code></pre>
 				</div>
@@ -1133,9 +1224,18 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 				<div class="tsd-signature tsd-kind-icon">reduce<wbr>Iteratee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in modules/DLinkedList.ts:38</li>
+						<li>Defined in modules/DLinkedList.ts:59</li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p> Function signature expected by .reduce, .reduceRight</p>
+					</div>
+					<pre><code> <span class="hljs-keyword">let</span> f: reduceIteratee&lt;<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>&gt; = <span class="hljs-function">(<span class="hljs-params">value, acc</span>) =&gt;</span> {
+   acc += value
+   <span class="hljs-keyword">return</span> acc
+ }</code></pre>
+				</div>
 				<div class="tsd-type-declaration">
 					<h4>Type declaration</h4>
 					<ul class="tsd-parameters">
