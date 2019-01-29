@@ -1,6 +1,6 @@
 {
   "name": "immutable-dll",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A Doubly Linked List storing immutable values and providing a fluent, functional interface.",
   "main": "index.js",
   "files": [
