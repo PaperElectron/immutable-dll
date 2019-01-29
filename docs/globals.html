@@ -1033,7 +1033,7 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 				<div class="tsd-signature tsd-kind-icon">async<wbr>Map<wbr>Iteratee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/4444cca/src/modules/DLinkedList.ts#L46">modules/DLinkedList.ts:46</a></li>
+						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/ac9ae50/src/modules/DLinkedList.ts#L46">modules/DLinkedList.ts:46</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1073,16 +1073,16 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 				<div class="tsd-signature tsd-kind-icon">async<wbr>Reduce<wbr>Iteratee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/4444cca/src/modules/DLinkedList.ts#L72">modules/DLinkedList.ts:72</a></li>
+						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/ac9ae50/src/modules/DLinkedList.ts#L72">modules/DLinkedList.ts:72</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p> Function signature expected by .reduce, .reduceRight</p>
 					</div>
-					<pre><code> <span class="hljs-keyword">let</span> f: reduceIteratee&lt;<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>&gt; = <span class="hljs-function">(<span class="hljs-params">value, acc</span>) =&gt;</span> {
+					<pre><code> <span class="hljs-keyword">let</span> f: asyncReduceIteratee&lt;<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>&gt; = <span class="hljs-function">(<span class="hljs-params">acc, value</span>) =&gt;</span> {
    acc += value
-   <span class="hljs-keyword">return</span> acc
+   <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve(acc)
  }</code></pre>
 				</div>
 				<div class="tsd-type-declaration">
@@ -1090,20 +1090,20 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 					<ul class="tsd-parameters">
 						<li class="tsd-parameter-siganture">
 							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, V<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></li>
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></li>
 							</ul>
 							<ul class="tsd-descriptions">
 								<li class="tsd-description">
 									<h4 class="tsd-parameters-title">Parameters</h4>
 									<ul class="tsd-parameters">
 										<li>
-											<h5>T: <span class="tsd-signature-type">any</span></h5>
+											<h5>A: <span class="tsd-signature-type">any</span></h5>
 										</li>
 										<li>
-											<h5>V: <span class="tsd-signature-type">any</span></h5>
+											<h5>T: <span class="tsd-signature-type">any</span></h5>
 										</li>
 									</ul>
-									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">V</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 							</ul>
 						</li>
@@ -1116,7 +1116,7 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 				<div class="tsd-signature tsd-kind-icon">each<wbr>Iteratee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/4444cca/src/modules/DLinkedList.ts#L36">modules/DLinkedList.ts:36</a></li>
+						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/ac9ae50/src/modules/DLinkedList.ts#L36">modules/DLinkedList.ts:36</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1153,7 +1153,7 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 				<div class="tsd-signature tsd-kind-icon">filter<wbr>Predicate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/4444cca/src/modules/DLinkedList.ts#L18">modules/DLinkedList.ts:18</a></li>
+						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/ac9ae50/src/modules/DLinkedList.ts#L18">modules/DLinkedList.ts:18</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1190,7 +1190,7 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 				<div class="tsd-signature tsd-kind-icon">map<wbr>Iteratee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/4444cca/src/modules/DLinkedList.ts#L27">modules/DLinkedList.ts:27</a></li>
+						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/ac9ae50/src/modules/DLinkedList.ts#L27">modules/DLinkedList.ts:27</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -1227,14 +1227,14 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 				<div class="tsd-signature tsd-kind-icon">reduce<wbr>Iteratee<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/4444cca/src/modules/DLinkedList.ts#L59">modules/DLinkedList.ts:59</a></li>
+						<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/ac9ae50/src/modules/DLinkedList.ts#L59">modules/DLinkedList.ts:59</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p> Function signature expected by .reduce, .reduceRight</p>
 					</div>
-					<pre><code> <span class="hljs-keyword">let</span> f: reduceIteratee&lt;<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>&gt; = <span class="hljs-function">(<span class="hljs-params">value, acc</span>) =&gt;</span> {
+					<pre><code> <span class="hljs-keyword">let</span> f: reduceIteratee&lt;<span class="hljs-built_in">number</span>, <span class="hljs-built_in">number</span>&gt; = <span class="hljs-function">(<span class="hljs-params">acc, value</span>) =&gt;</span> {
    acc += value
    <span class="hljs-keyword">return</span> acc
  }</code></pre>
@@ -1244,20 +1244,20 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 					<ul class="tsd-parameters">
 						<li class="tsd-parameter-siganture">
 							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
-								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, V<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">V</span></li>
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span></li>
 							</ul>
 							<ul class="tsd-descriptions">
 								<li class="tsd-description">
 									<h4 class="tsd-parameters-title">Parameters</h4>
 									<ul class="tsd-parameters">
 										<li>
-											<h5>T: <span class="tsd-signature-type">any</span></h5>
+											<h5>A: <span class="tsd-signature-type">any</span></h5>
 										</li>
 										<li>
-											<h5>V: <span class="tsd-signature-type">any</span></h5>
+											<h5>T: <span class="tsd-signature-type">any</span></h5>
 										</li>
 									</ul>
-									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">V</span></h4>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">A</span></h4>
 								</li>
 							</ul>
 						</li>
@@ -1277,7 +1277,7 @@ double.toArray() <span class="hljs-comment">// [ { a: 2, b: 4 }, { a: 6, b: 8 },
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/4444cca/src/modules/Node.ts#L15">modules/Node.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/PaperElectron/immutable-dll/blob/ac9ae50/src/modules/Node.ts#L15">modules/Node.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">

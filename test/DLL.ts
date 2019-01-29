@@ -347,7 +347,7 @@ describe('Double Linked List', () => {
 
   test('.reduce - Reduces list values to a single element', () => {
     let dll = DLinkedList.fromArray([1,2,3,4,5])
-    let results = dll.reduce((v, acc) => {
+    let results = dll.reduce((acc, v) => {
       acc += v
       return acc
     }, 0)
@@ -359,7 +359,7 @@ describe('Double Linked List', () => {
 
   test('.reduceRight - Reduces list values to a single element, in reverse order.', () => {
     let dll = DLinkedList.fromArray([1,2,3,4,5])
-    let results = dll.reduceRight((v, acc) => {
+    let results = dll.reduceRight((acc, v) => {
       acc -= v
       return acc
     }, 15)
@@ -369,7 +369,7 @@ describe('Double Linked List', () => {
 
   test('.asyncReduce - Asynchronously Reduces list values to a single element', async () => {
     let dll = DLinkedList.fromArray([1,2,3,4,5])
-    let results = await dll.asyncReduce((v, acc) => {
+    let results = await dll.asyncReduce((acc,v) => {
       acc += v
       return Promise.resolve(acc)
     }, 0)
@@ -380,7 +380,7 @@ describe('Double Linked List', () => {
 
   test('.asyncReduceRight - Asynchronously Reduces list values to a single element, in reverse order', async () => {
     let dll = DLinkedList.fromArray([1,2,3,4,5])
-    let results = await dll.asyncReduceRight((v, acc) => {
+    let results = await dll.asyncReduceRight((acc, v) => {
       acc -= v
       return Promise.resolve(acc)
     }, 15)

@@ -50,26 +50,26 @@ export type asyncMapIteratee<T, V> = (T) => Promise<V> | V
  *  Function signature expected by .reduce, .reduceRight
  *
  *  ```
- *  let f: reduceIteratee<number, number> = (value, acc) => {
+ *  let f: reduceIteratee<number, number> = (acc, value) => {
  *    acc += value
  *    return acc
  *  }
  *  ```
  */
-export type reduceIteratee<T, V> = (T, V) => V
+export type reduceIteratee<A, T> = (A, T) => A
 
 
 /**
  *  Function signature expected by .reduce, .reduceRight
  *
  *  ```
- *  let f: reduceIteratee<number, number> = (value, acc) => {
+ *  let f: asyncReduceIteratee<number, number> = (acc, value) => {
  *    acc += value
- *    return acc
+ *    return Promise.resolve(acc)
  *  }
  *  ```
  */
-export type asyncReduceIteratee<T, V> = (T, V) => Promise<V>
+export type asyncReduceIteratee<A, T> = (A, T) => Promise<A>
 
 export class DLinkedList<T> {
 
@@ -658,7 +658,7 @@ export class DLinkedList<T> {
     let current = this.head_node;
     while (current !== null) {
       let data = current.getData()
-      acc = iteratee(data, acc)
+      acc = iteratee(acc, data)
       current = current.getNext();
     }
 
@@ -685,7 +685,7 @@ export class DLinkedList<T> {
     let current = this.tail_node;
     while (current !== null) {
       let data = current.getData()
-      acc = iteratee(data, acc)
+      acc = iteratee(acc, data)
       current = current.getPrev();
     }
 
@@ -712,11 +712,11 @@ export class DLinkedList<T> {
    * @param iteratee
    * @param accumulator
    */
-  async asyncReduce<V>(iteratee: asyncReduceIteratee<T, V>, accumulator: any): Promise<V> {
+  async asyncReduce<A>(iteratee: asyncReduceIteratee<A, T>, accumulator: any): Promise<A> {
     let acc = accumulator
     let stepper = async (node: Node<T>) => {
       if(node === null) {return acc}
-      acc = await Promise.resolve(iteratee(node.getData(), acc))
+      acc = await Promise.resolve(iteratee(acc, node.getData()))
 
       return stepper(node.getNext())
     }
@@ -744,12 +744,12 @@ export class DLinkedList<T> {
    * @param iteratee
    * @param accumulator
    */
-  async asyncReduceRight<V>(iteratee: asyncReduceIteratee<T, V>, accumulator: any): Promise<V> {
+  async asyncReduceRight<A>(iteratee: asyncReduceIteratee<A, T>, accumulator: any): Promise<A> {
     let acc = accumulator
     let stepper = async (node: Node<T>) => {
 
       if(node === null) {return acc}
-      acc = await Promise.resolve(iteratee(node.getData(), acc))
+      acc = await Promise.resolve(iteratee(acc, node.getData()))
 
       return stepper(node.getPrev())
     }
